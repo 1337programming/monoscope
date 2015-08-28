@@ -1,2 +1,4 @@
 node_modules/
 public/index.html
+**~
+.DS_Store
