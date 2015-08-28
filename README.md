@@ -8,7 +8,7 @@ Generate code on the fly within the browser.
 ##TODO
   - [ ] [#1](https://github.com/1337programming/monoscope/issues/1), Create a pattern for adding a new macro button
   - [ ] [#2](https://github.com/1337programming/monoscope/issues/2), Create CSS for custom pattern for macro buttons
-  - [ ] [#3](https://github.com/1337programming/monoscope/issues/3, Create a form that overlays the screen to fill out any options a macro button can have.
+  - [ ] [#3](https://github.com/1337programming/monoscope/issues/3), Create a form that overlays the screen to fill out any options a macro button can have.
 
 ###Monoscope-Angular2
  - Build Angular2 skeleton app
