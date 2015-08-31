@@ -5,17 +5,22 @@
 Generate code on the fly within the browser.
 
 
-##TODO
+##TODO before release 1.0 
   - [ ] [#1](https://github.com/1337programming/monoscope/issues/1), Create a pattern for adding a new macro button
   - [ ] [#2](https://github.com/1337programming/monoscope/issues/2), Create CSS for custom pattern for macro buttons
   - [ ] [#3](https://github.com/1337programming/monoscope/issues/3), Create a form that overlays the screen to fill out any options a macro button can have.
+  - [ ] [#6] (https://github.com/1337programming/monoscope/issues/6), Edit project settings configuration
 
 ###Monoscope-Angular2
- - Build Angular2 skeleton app
- - Define Sub-generators
+ - [ ] [#9] (https://github.com/1337programming/monoscope/issues/9), Build Angular2 skeleton app
+ - [ ] [#10] (https://github.com/1337programming/monoscope/issues/10), Define Sub-generators
 
 ###gulp-monoscope
- - Create plugin wrapper
+ - [ ] [#11] (https://github.com/1337programming/monoscope/issues/11), Create plugin wrapper
 
 ###grunt-monoscope
- - Create plugin wrapper
+ - [ ] [#12] (https://github.com/1337programming/monoscope/issues/12), Create plugin wrapper
+ 
+###Monoscope UI
+ - [x] [#5] (https://github.com/1337programming/monoscope/issues/5) Modal Component
+ - [ ] [#7] (https://github.com/1337programming/monoscope/issues/7) Ckeditor Implementation
