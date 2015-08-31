@@ -1,7 +1,7 @@
 [![GitHub version](https://badge.fury.io/gh/1337programming%2Fangular2.0-App.svg)](http://badge.fury.io/gh/1337programming%2Fangular2.0-App)
 [![Dependency Status](https://david-dm.org/1337-programming/angular2.0-App.svg)](https://david-dm.org/1337programming/angular2.0-App)
 [![Issue Stats](http://issuestats.com/github/1337-programming/angular2.0-Appr/badge/pr?style=flat)](http://issuestats.com/github/1337-programming/angular2.0-App)
-# monoscope
+#Monoscope
 Generate code on the fly within the browser.
 
 
@@ -24,3 +24,13 @@ Generate code on the fly within the browser.
 ###Monoscope UI
  - [x] [#5] (https://github.com/1337programming/monoscope/issues/5) Modal Component
  - [ ] [#7] (https://github.com/1337programming/monoscope/issues/7) Ckeditor Implementation
+ 
+## Install & Run
+ * Fork repo
+ * Clone
+ * `npm install`
+ * run desired project on `http://localhost:9000` or edit url in `monoscope.js` under `defaultOptions`
+ * `node monoscope.js`
+ 
+# License
+  [MIT](/LICENSE)
