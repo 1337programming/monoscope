@@ -22,12 +22,6 @@ a.modal-link:hover {
   transition: all 1s;
 }
 
-
-/* end link modal*/
-
-
-/*style untuk modal */
-
 #modal {
   visibility: hidden;
   opacity: 0;
@@ -82,9 +76,6 @@ a.modal-close {
   line-height: 1;
   color: #333;
 }
-
-
-/* style untuk isi modal */
 
 .modal-form {
   margin: 10px auto;
