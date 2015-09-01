@@ -10,7 +10,7 @@ body {
 .bar {
   background-color: #33C22C;
   width: 100%;
-  padding: 10px 10px;
+  /*padding: 10px 10px;*/
   top: 0;
   left: 0;
   right: 0;
@@ -64,4 +64,11 @@ body {
   background-color: #e6e6e6;
   border-color: #adadad;
   color: #333;
+}
+
+.nav-row {
+  height: 50px;
+  min-height: 50px;
+  width: 100%;
+  display: inline-block;
 }

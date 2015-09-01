@@ -6,7 +6,12 @@ html
     title!=title
   body
     .bar
-      include ./components/modal/modal.jade
+      .nav-row
+        include ./components/modal/modal.jade
+
+      .nav-row
+        include ./components/modal/modal.jade
+
     iframe#app(src='#{url}', frameborder='0', height='100%', width='100%')
     script(src='socket.io.js')
     script(src='scripts.js')

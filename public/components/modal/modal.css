@@ -2,10 +2,10 @@
   display: inline-flex;
 }
 a.modal-link {
-  padding: 17px 0;
+  padding: 13px 10px;
   text-align: center;
   position: relative;
-  width: 300px;
+  /*width: 300px;*/
   color: #fff;
   text-decoration: none;
   background-color: #FFBA00;
@@ -16,7 +16,7 @@ a.modal-link {
 
 a.modal-link:hover {
   background-color: #ff9900;
-  box-shadow: 0 3px 0px 0px #eea900;
+  /*box-shadow: 0 3px 0px 0px #eea900;*/
   -webkit-transition: all 1s;
   -moz-transition: all 1s;
   transition: all 1s;
