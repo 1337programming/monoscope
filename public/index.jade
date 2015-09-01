@@ -2,10 +2,11 @@ doctype html
 html
   head
     link(rel='stylesheet', href='style.css')
+    link(rel='stylesheet', href='./components/modal/modal.css')
     title!=title
   body
     .bar
-      button(onclick='doStuff()') Hello World!
+      include ./components/modal/modal.jade
     iframe#app(src='#{url}', frameborder='0', height='100%', width='100%')
     script(src='socket.io.js')
     script(src='scripts.js')
