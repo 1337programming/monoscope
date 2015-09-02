@@ -30,7 +30,8 @@ monoscope.run = function(options) {
 
     // Routing
     app.use(express.static(__dirname + '/public'));
-    app.use(express.static(__dirname + '/node_modules/socket.io/node_modules/socket.io-client/'));
+    app.use(express.static(__dirname + '/node_modules/mithril'));
+    app.use(express.static(__dirname + '/node_modules/socket.io/node_modules/socket.io-client'));
     var i = 0;
 
     io.on('connection', function(socket) {
