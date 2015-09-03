@@ -23,12 +23,6 @@
 }
 
 #modal {
-  visibility: hidden;
-  opacity: 0;
-  margin-top: -549px;
-}
-
-#modal:target {
   visibility: visible;
   opacity: 1;
   background-color: rgba(255, 255, 255, 0.7);
@@ -65,7 +59,7 @@
   border-radius: 3px;
 }
 
-a.modal-close {
+.modal-close {
   position: absolute;
   top: 3px;
   right: 3px;
@@ -75,6 +69,7 @@ a.modal-close {
   text-decoration: none;
   line-height: 1;
   color: #333;
+  cursor: pointer;
 }
 
 .modal-form {
