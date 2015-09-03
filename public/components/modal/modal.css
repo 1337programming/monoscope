@@ -1,7 +1,7 @@
 .link-wrapper {
   display: inline-flex;
 }
-a.modal-link {
+.modal-link {
   padding: 13px 10px;
   text-align: center;
   position: relative;
@@ -14,7 +14,7 @@ a.modal-link {
   display: block;
 }
 
-a.modal-link:hover {
+.modal-link:hover {
   background-color: #ff9900;
   /*box-shadow: 0 3px 0px 0px #eea900;*/
   -webkit-transition: all 1s;
