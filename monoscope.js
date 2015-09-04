@@ -44,8 +44,8 @@ monoscope.run = function(options) {
             });*/
         });
 
-        socket.on('module', function(information) {
-            console.log('hooray!');
+        socket.on('shortcut', function(information) {
+            console.log(JSON.stringify(information, null, 4));
         });
 
     });

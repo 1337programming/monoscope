@@ -1,23 +1,45 @@
 var socket = io();
 socket.emit('connected', 'Connected!');
+
+var binds = function(prop) {
+    return {oninput: m.withAttr("value", prop), value: prop()};
+};
 var module = {};
 module.controller = function() {
-    shortcuts.map(function(shortcut) {
-        shortcut.modal = {};
-        shortcut.modal.visible = m.prop(false);
-        shortcut.modal.view = function() {
-            if (shortcut.modal.visible()) {
+    var vm = this;
+    var submit = function(shortcut) {
+        return function() {
+            socket.emit('shortcut', shortcut);
+        };
+    };
+    vm.shortcuts = m.prop([]);
+    m.request({
+        method: "GET",
+        url: "/shortcuts.json"
+    }).then(vm.shortcuts).then(function(shortcuts) {
+        shortcuts.map(function(shortcut) {
+            shortcut.modal = {};
+            shortcut.form = shortcut.form || [];
+            shortcut.form.map(function(field) {
+                field.value = m.prop(field.default || '');
+            });
+            shortcut.modal.visible = m.prop(false);
+            shortcut.modal.view = function() {
+                if (!shortcut.modal.visible()) {
+                    return '';
+                }
                 return m('#modal.modal-wrapper', [
                     m('.modal-container', [
                         m('form.modal-form', [
-                            m('h2', 'New Module'),
-                            m('p', JSON.stringify(shortcut, null, 4)),
+                            m('h2', shortcut.name),
+                            shortcut.form.map(function(field) {
+                                return m('input.row[type=text]', binds(field.value));
+                            }),
                             m('.input-group', [
                                 m('p', [
-                                    m('input[type=text]')
-                                ]),
-                                m('p', [
-                                    m('input[type=submit]', 'Create')
+                                    m('input[type=submit]', {
+                                        onclick: submit(shortcut)
+                                    }, 'Create')
                                 ])
                             ])
                         ]),
@@ -26,22 +48,20 @@ module.controller = function() {
                         }, 'X')
                     ])
                 ]);
-            } else {
-                return '';
-            }
-        };
+            };
+        });
     });
 };
 module.view = function(vm) {
     return [
         m('.shortcut-container', [
-            shortcuts.map(function(shortcut) {
+            vm.shortcuts().map(function(shortcut) {
                 return m('button.monobutton', {
                     onclick: shortcut.modal.visible.bind(this, true)
                 }, shortcut.name);
             })
         ]),
-        shortcuts.map(function(shortcut) {
+        vm.shortcuts().map(function(shortcut) {
             return shortcut.modal.view();
         })
     ];
