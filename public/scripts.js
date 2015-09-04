@@ -20,8 +20,10 @@ module.controller = function() {
         shortcuts.map(function(shortcut) {
             shortcut.modal = {};
             shortcut.form = shortcut.form || [];
+            var id = 0;
             shortcut.form.map(function(field) {
                 field.value = m.prop(field.default || '');
+                field.id = id++;
             });
             shortcut.modal.visible = m.prop(false);
             shortcut.modal.view = function() {
@@ -33,7 +35,12 @@ module.controller = function() {
                         m('form.modal-form', [
                             m('h2', shortcut.name),
                             shortcut.form.map(function(field) {
-                                return m('input.row[type=text]', binds(field.value));
+                                return m('.group', [
+                                    m('label[for=' + field.id + ']', field.label),
+                                    m('br'),
+                                    m('input#' + id + '.row[type=text]', binds(field.value)),
+                                    m('hr')
+                                ]);
                             }),
                             m('.input-group', [
                                 m('p', [
