@@ -38,7 +38,7 @@ module.controller = function() {
                                 return m('.group', [
                                     m('label[for=' + field.id + ']', field.label),
                                     m('br'),
-                                    m('input#' + id + '.row[type=text]', binds(field.value)),
+                                    m('input#' + field.id + '.row[type=text]', binds(field.value)),
                                     m('hr')
                                 ]);
                             }),
