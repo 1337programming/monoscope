@@ -21,11 +21,7 @@
             {
                 "label": "Service Name",
                 "type": "text",
-                "default": "newModule"
-            },
-            {
-                "label": "Include a Directive?",
-                "type": "checkbox"
+                "default": "myService"
             }
         ]
     }
