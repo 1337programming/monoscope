@@ -17,7 +17,7 @@ monoscope.run = function(options) {
     options = options || {};
     var defaultOptions = {
         title: 'Monoscope',
-        url: 'http://localhost:9000/',
+        url: 'http://localhost:8080/',
         port: 8045
     };
     options = extend(defaultOptions, options);
