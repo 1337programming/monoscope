@@ -1,0 +1,28 @@
+[
+    {
+        "name": "Create a Module",
+        "key": "module",
+        "form": [
+            {
+                "label": "Module Name",
+                "type": "text",
+                "default": "newModule"
+            },
+            {
+                "label": "Include a Directive?",
+                "type": "checkbox"
+            }
+        ]
+    },
+    {
+        "name": "Create a Service",
+        "key": "service",
+        "form": [
+            {
+                "label": "Service Name",
+                "type": "text",
+                "default": "myService"
+            }
+        ]
+    }
+]
