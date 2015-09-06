@@ -8,8 +8,10 @@ var module = {};
 module.controller = function() {
     var vm = this;
     var submit = function(shortcut) {
-        return function() {
+        return function (e) {
             socket.emit('shortcut', shortcut);
+            shortcut.modal.visible(false);
+            e.preventDefault();
         };
     };
     vm.shortcuts = m.prop([]);
@@ -32,7 +34,7 @@ module.controller = function() {
                 }
                 return m('#modal.modal-wrapper', [
                     m('.modal-container', [
-                        m('form.modal-form', [
+                        m('form.modal-form', {onsubmit:submit(shortcut)}, [
                             m('h2', shortcut.name),
                             shortcut.form.map(function(field) {
                                 return m('.group', [
@@ -45,8 +47,9 @@ module.controller = function() {
                             m('.input-group', [
                                 m('p', [
                                     m('input[type=submit]', {
-                                        onclick: submit(shortcut)
-                                    }, 'Create')
+                                        onclick: submit(shortcut),
+                                        value: 'Create'
+                                    })
                                 ])
                             ])
                         ]),
