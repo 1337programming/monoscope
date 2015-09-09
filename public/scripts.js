@@ -4,6 +4,33 @@ socket.emit('connected', 'Connected!');
 var binds = function(prop) {
     return {oninput: m.withAttr("value", prop), value: prop()};
 };
+var createInput = function(field) {
+    if (field.type === 'select') {
+        return createInputDropdown(field);
+    }
+    else {
+        return createInputText(field);
+    }
+};
+var createInputDropdown = function(field) {
+    field.options = field.options || [];
+    var props = binds(field.value);
+    props.size = field.options.length;
+    props.multiple = 'multiple';
+    return m('select', props, [
+        field.options.map(function(option) {
+            var opts = { value: option.value };
+            if (option.selected) {
+                opts.selected = option.selected;
+            }
+            console.log(opts);
+            return m('option', opts, option.label);
+        })
+    ]);
+};
+var createInputText = function(field) {
+    return m('input#' + field.id + '.row[type=text]', binds(field.value));
+};
 var module = {};
 module.controller = function() {
     var vm = this;
@@ -40,7 +67,7 @@ module.controller = function() {
                                 return m('.group', [
                                     m('label[for=' + field.id + ']', field.label),
                                     m('br'),
-                                    m('input#' + field.id + '.row[type=text]', binds(field.value)),
+                                    createInput(field),
                                     m('hr')
                                 ]);
                             }),
