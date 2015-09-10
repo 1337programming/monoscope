@@ -1,0 +1,7 @@
+{
+  "name": "myProject",
+  "version": "0.0.0",
+  "title": "monoscope",
+  "monoscopePort": 8045,
+  "appPort": 9000
+}
