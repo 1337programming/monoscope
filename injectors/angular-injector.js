@@ -27,62 +27,61 @@ angularInjector.inject = function (data) {
       terminal: false
     });
 
-    rd.on('line'),
-      function (line) {
-        // Model injection
-        if (flag === 'model') {
-          if (line.indexOf('angular.module') > -1) {
-            line.replace('App', this.data.appName);
-            line.replace('moduleName', this.data.moduleName);
-          }
-          if (line.indexOf('.state(') > -1) {
-            line.replace('moduleState', this.data.moduleState);
-          }
-          if (line.indexOf('url:') > -1) {
-            line.replace('moduleUrl', this.data.moduleUrl);
-          }
-          if (line.indexOf('templateUrl:') > -1) {
-            line.replace('moduleUrl', this.data.templateUrl);
-          }
-          if (line.indexOf('controller:') > -1) {
-            line.replace('moduleCtr', this.data.moduleCtr);
-          }
+    rd.on('line', function (line) {
+      // Model injection
+      if (flag === 'model') {
+        if (line.indexOf('angular.module') > -1) {
+          line.replace('App', this.data.appName);
+          line.replace('moduleName', this.data.moduleName);
         }
+        if (line.indexOf('.state(') > -1) {
+          line.replace('moduleState', this.data.moduleState);
+        }
+        if (line.indexOf('url:') > -1) {
+          line.replace('moduleUrl', this.data.moduleUrl);
+        }
+        if (line.indexOf('templateUrl:') > -1) {
+          line.replace('moduleUrl', this.data.templateUrl);
+        }
+        if (line.indexOf('controller:') > -1) {
+          line.replace('moduleCtr', this.data.moduleCtr);
+        }
+      }
 
-        // Service Injection
-        if (flag === 'service') {
-          if (line.indexOf('angular.module') > -1) {
-            line.replace('App', this.data.appName);
-            line.replace('moduleName', this.data.moduleName);
-          }
-          if (line.indexOf('serviceName') > -1) {
-            line.replace('serviceName', this.data.serviceName);
-            line.replace('args', this.data.serviceArgs);
-          }
+      // Service Injection
+      if (flag === 'service') {
+        if (line.indexOf('angular.module') > -1) {
+          line.replace('App', this.data.appName);
+          line.replace('moduleName', this.data.moduleName);
         }
+        if (line.indexOf('serviceName') > -1) {
+          line.replace('serviceName', this.data.serviceName);
+          line.replace('args', this.data.serviceArgs);
+        }
+      }
 
-        // Directive Injection
-        if (flag === 'directive') {
-          if (line.indexOf('angular.module') > -1) {
-            line.replace('App', this.data.appName);
-            line.replace('moduleName', this.data.moduleName);
-          }
-          if (line.indexOf('directiveName') > -1) {
-            line.replace('directiveName', this.data.directiveName);
-            line.replace('args', this.data.directiveArgs);
-          }
+      // Directive Injection
+      if (flag === 'directive') {
+        if (line.indexOf('angular.module') > -1) {
+          line.replace('App', this.data.appName);
+          line.replace('moduleName', this.data.moduleName);
         }
-        // Controller Injection
-        if (flag === 'controller') {
-          if (line.indexOf('angular.module') > -1) {
-            line.replace('App', this.data.appName);
-            line.replace('moduleName', this.data.moduleName);
-          }
-          if (line.indexOf('controllerName') > -1) {
-            line.replace('controllerName', this.data.controllerName);
-            line.replace('args', this.data.controllerArgs);
-          }
+        if (line.indexOf('directiveName') > -1) {
+          line.replace('directiveName', this.data.directiveName);
+          line.replace('args', this.data.directiveArgs);
         }
-      });
+      }
+      // Controller Injection
+      if (flag === 'controller') {
+        if (line.indexOf('angular.module') > -1) {
+          line.replace('App', this.data.appName);
+          line.replace('moduleName', this.data.moduleName);
+        }
+        if (line.indexOf('controllerName') > -1) {
+          line.replace('controllerName', this.data.controllerName);
+          line.replace('args', this.data.controllerArgs);
+        }
+      }
+    });
   }
 };
