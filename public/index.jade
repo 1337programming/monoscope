@@ -2,12 +2,10 @@ doctype html
 html
   head
     link(rel='stylesheet', href='style.css')
-    link(rel='stylesheet', href='./components/modal/modal.css')
     title!=title
   body
     section#nav
     iframe#app(src='#{url}', frameborder='0', height='100%', width='100%')
     script(src='mithril.min.js')
     script(src='socket.io.js')
-    script(src='shortcuts.js')
     script(src='scripts.js')
