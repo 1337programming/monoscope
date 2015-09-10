@@ -24,12 +24,28 @@
                 "default": "myService"
             },
             {
-                "label": "Dropdown Test",
+                "label": "Select Test",
                 "type": "select",
                 "options": [
                     {
                         "label": "Label 1",
                         "value": "label1"
+                    },
+                    {
+                        "label": "Label 2",
+                        "value": "label2",
+                        "selected": "selected"
+                    }
+                ]
+            },
+            {
+                "label": "Multiselect Test",
+                "type": "multiselect",
+                "options": [
+                    {
+                        "label": "Label 1",
+                        "value": "label1",
+                        "selected": "selected"
                     },
                     {
                         "label": "Label 2",

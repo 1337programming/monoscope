@@ -8,25 +8,31 @@ var createInput = function(field) {
     if (field.type === 'select') {
         return createInputDropdown(field);
     }
+    else if (field.type === 'multiselect') {
+        return createInputDropdown(field, true);
+    }
     else {
         return createInputText(field);
     }
 };
-var createInputDropdown = function(field) {
+var createInputDropdown = function(field, isMultiple) {
     field.options = field.options || [];
-    var props = binds(field.value);
+    var props = {};
     props.size = field.options.length;
-    props.multiple = 'multiple';
-    return m('select', props, [
+    if (isMultiple) {
+        props.multiple = 'multiple';    
+    }
+    var s = m('select', props, 
         field.options.map(function(option) {
             var opts = { value: option.value };
             if (option.selected) {
-                opts.selected = option.selected;
+                opts.selected = 'selected';
             }
-            console.log(opts);
             return m('option', opts, option.label);
         })
-    ]);
+    );
+    console.log(s);
+    return s;
 };
 var createInputText = function(field) {
     return m('input#' + field.id + '.row[type=text]', binds(field.value));
