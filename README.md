@@ -30,8 +30,8 @@ Generate code on the fly within the browser.
  * Fork repo
  * Clone
  * `npm install`
- * run desired project on `http://localhost:9000` or edit url in `monoscope.js` under `defaultOptions`
- * `node monoscope.js`
+ * edit `monoscope.json` to have `appPort` match the port of your desired app.
+ * Run your desired app then run monoscope by typing `node monoscope.js`
  
 # License
   [MIT](/LICENSE)
