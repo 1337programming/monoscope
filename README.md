@@ -24,7 +24,7 @@ Generate code on the fly within the browser.
  
 ###Monoscope UI
  - [x] [#5] (https://github.com/1337programming/monoscope/issues/5) Modal Component
- - [ ] [#7] (https://github.com/1337programming/monoscope/issues/7) Ckeditor Implementation
+ - [ ] [#20] (https://github.com/1337programming/monoscope/issues/20) Editing Source Code
  
 ## Install & Run
  * Fork repo
