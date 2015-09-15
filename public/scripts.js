@@ -4,7 +4,7 @@ socket.emit('connected', 'Connected!');
 
 var inputs = {};
 
-inputs.binds = function (props) {
+inputs.binds = function (prop) {
   return {
     oninput: m.withAttr("value", prop),
     value: prop()
