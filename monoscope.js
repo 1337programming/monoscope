@@ -29,8 +29,6 @@ monoscope.run = function () {
 
   // Routing
   app.use(express.static(__dirname + '/public'));
-  app.use(express.static(__dirname + '/node_modules/mithril'));
-  app.use(express.static(__dirname + '/node_modules/socket.io/node_modules/socket.io-client'));
 
   io.on('connection', function (socket) {
 
