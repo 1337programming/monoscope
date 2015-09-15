@@ -53,6 +53,11 @@
                         "selected": "selected"
                     }
                 ]
+            },
+            {
+                "label": "Checkbox Test",
+                "type": "checkbox",
+                "default": true
             }
         ]
     }

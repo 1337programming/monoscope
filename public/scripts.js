@@ -16,6 +16,8 @@ inputs.createInput = function (field) {
     return inputs.createInputDropdown(field);
   } else if (field.type === 'multiselect') {
     return inputs.createInputDropdown(field, true);
+  } else if (field.type === 'checkbox') {
+    return inputs.createInputCheckbox(field);
   }
   return inputs.createInputText(field);
 };
@@ -44,6 +46,14 @@ inputs.createInputDropdown = function (field, isMultiple) {
 
 inputs.createInputText = function (field) {
   return m('input#' + field.id + '.row[type=text]', inputs.binds(field.value));
+};
+
+inputs.createInputCheckbox = function (field) {
+  if (field.value() !== true && field.value() !== false) {
+    field.value(false);
+  }
+
+  return m('input#' + field.id + '.row[type=checkbox]', {onclick: m.withAttr("checked", field.value), checked: field.value()});
 };
 
 
