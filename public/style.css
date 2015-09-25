@@ -132,12 +132,6 @@ body {
   }
 }
 
-@media (max-width: 767px) {
-  .modal-container {
-    width: 100%;
-  }
-}
-
 .modal-container {
   position: relative;
   margin: 7% auto;

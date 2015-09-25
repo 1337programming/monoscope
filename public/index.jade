@@ -7,4 +7,6 @@ html
   body
     section#nav
     iframe#app(src='#{url}', frameborder='0', height='100%', width='100%')
+    script!=shortcuts
+        //window.shortcuts = '#{shorcuts}';
     script(src='scripts.js')
