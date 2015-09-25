@@ -2,7 +2,7 @@
   "name": "monoscope",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "monoscope.js",
   "scripts": {
     "build": "webpack ./src/main.js ./public/scripts.js",
     "test": "echo \"Error: no test specified\" && exit 1"
