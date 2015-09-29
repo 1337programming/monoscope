@@ -1,5 +1,5 @@
 [![Code Climate](https://codeclimate.com/github/1337programming/monoscope.svg)](https://codeclimate.com/github/1337programming/monoscope)
-[![GitHub version](https://badge.fury.io/gh/1337programming%2Fangular2.0-App.svg)](http://badge.fury.io/gh/1337programming%2Fangular2.0-App)
+[![GitHub version](https://badge.fury.io/gh/1337programming%2Fmonoscope.svg)](http://badge.fury.io/gh/1337programming%2Fmonoscope)
 [![Dependency Status](https://david-dm.org/1337-programming/angular2.0-App.svg)](https://david-dm.org/1337programming/angular2.0-App)
 [![Issue Stats](http://issuestats.com/github/1337-programming/angular2.0-Appr/badge/pr?style=flat)](http://issuestats.com/github/1337-programming/angular2.0-App)
 #Monoscope
