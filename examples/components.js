@@ -66,5 +66,10 @@ function getShortcuts() {
         action: function(data) {
             console.log('Create a Service data', data);
         }
+    }, {
+        name: 'No Form',
+        action: function() {
+            console.log('Run some Node code immediately.');
+        }
     }];
 }

@@ -36,7 +36,6 @@ inputs.createInputDropdown = function (field, isMultiple) {
       return m('option', opts, option.label);
     })
   );
-  console.log(s);
   return s;
 };
 

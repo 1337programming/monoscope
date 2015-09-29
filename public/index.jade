@@ -2,11 +2,9 @@ doctype html
 html
   head
     link(rel='stylesheet', href='style.css')
-    link(src='src/editors/javalink-editor.jade')
     title!=title
   body
     section#nav
     iframe#app(src='#{url}', frameborder='0', height='100%', width='100%')
-    script!=shortcuts
-        //window.shortcuts = '#{shorcuts}';
+    script!=shortcut
     script(src='scripts.js')

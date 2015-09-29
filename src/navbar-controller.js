@@ -4,7 +4,7 @@ var inputs = require('./inputs');
 
 module.exports = function() {
     var vm = this;
-    var submit = function(shortcut) {
+    vm.submit = function(shortcut) {
         return function(e) {
             socket.emit('shortcut', shortcut);
             shortcut.modal.visible(false);
@@ -29,7 +29,7 @@ module.exports = function() {
             return m('#modal.modal-wrapper', [
                 m('.modal-container', [
                     m('form.modal-form', {
-                        onsubmit: submit(shortcut)
+                        onsubmit: vm.submit(shortcut)
                     }, [
                         m('h2', shortcut.name),
                         shortcut.form.map(function(field) {
@@ -43,8 +43,8 @@ module.exports = function() {
                         m('.input-group', [
                             m('p', [
                                 m('input[type=submit]', {
-                                    onclick: submit(shortcut),
-                                    value: 'Create'
+                                    onclick: vm.submit(shortcut),
+                                    value: 'Run'
                                 })
                             ])
                         ])

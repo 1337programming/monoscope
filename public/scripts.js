@@ -1246,7 +1246,7 @@
 
 	module.exports = function() {
 	    var vm = this;
-	    var submit = function(shortcut) {
+	    vm.submit = function(shortcut) {
 	        return function(e) {
 	            socket.emit('shortcut', shortcut);
 	            shortcut.modal.visible(false);
@@ -1271,7 +1271,7 @@
 	            return m('#modal.modal-wrapper', [
 	                m('.modal-container', [
 	                    m('form.modal-form', {
-	                        onsubmit: submit(shortcut)
+	                        onsubmit: vm.submit(shortcut)
 	                    }, [
 	                        m('h2', shortcut.name),
 	                        shortcut.form.map(function(field) {
@@ -1285,8 +1285,8 @@
 	                        m('.input-group', [
 	                            m('p', [
 	                                m('input[type=submit]', {
-	                                    onclick: submit(shortcut),
-	                                    value: 'Create'
+	                                    onclick: vm.submit(shortcut),
+	                                    value: 'Run'
 	                                })
 	                            ])
 	                        ])
@@ -8546,7 +8546,6 @@
 	      return m('option', opts, option.label);
 	    })
 	  );
-	  console.log(s);
 	  return s;
 	};
 
@@ -8569,11 +8568,24 @@
 	var m = __webpack_require__(1);
 
 	module.exports = function(vm) {
+	    function openShortcut(shortcut, that) {
+	        var bindOpen = shortcut.modal.visible.bind(that, true);
+	        return function(e) {
+	            //Run shortcut if no form is specified.
+	            if (shortcut.form.length === 0) {
+	                vm.submit(shortcut)(e);
+	            }
+	            else {
+	                console.log('called!!!', shortcut);
+	                bindOpen();
+	            }
+	        };
+	    };
 	    return [
 	        m('.shortcut-container', [
 	            vm.shortcuts().map(function(shortcut) {
 	                return m('button.monobutton', {
-	                    onclick: shortcut.modal.visible.bind(this, true)
+	                    onclick: openShortcut(shortcut, this)
 	                }, shortcut.name);
 	            })
 	        ]),
