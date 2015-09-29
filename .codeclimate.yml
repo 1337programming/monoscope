@@ -1,0 +1,6 @@
+languages:
+	JavaScript: true
+
+exclude_paths:
+	public/scripts.js
+	public/index.html
