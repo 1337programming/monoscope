@@ -1,5 +1,5 @@
 languages:
-	JavaScript: true
+ - JavaScript: true
 
 exclude_paths:
  - public/scripts.js
