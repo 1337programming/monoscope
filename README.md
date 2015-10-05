@@ -15,5 +15,9 @@ Create shortcuts in Node.js for while developing your modern web application loc
  * Require the monoscope item in your automation development task.
  * Write `monoscope.run(configuration, options)` within your automation development task.
  
+## Monoscope
+![PandaBear](https://s3.amazonaws.com/uploads.hipchat.com/69515/932142/DL97c184IFoG2su/PandaBear.png)
+
+ 
 # License
   [MIT](/LICENSE)
