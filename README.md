@@ -3,35 +3,16 @@
 [![Dependency Status](https://david-dm.org/1337-programming/angular2.0-App.svg)](https://david-dm.org/1337programming/angular2.0-App)
 [![Issue Stats](http://issuestats.com/github/1337-programming/angular2.0-Appr/badge/pr?style=flat)](http://issuestats.com/github/1337-programming/angular2.0-App)
 #Monoscope
-Generate code on the fly within the browser.
 
+Create shortcuts in Node.js for while developing your modern web application locally.
 
-##TODO before release 1.0 
-  - [ ] [#1](https://github.com/1337programming/monoscope/issues/1), Create a pattern for adding a new macro button
-  - [ ] [#2](https://github.com/1337programming/monoscope/issues/2), Create CSS for custom pattern for macro buttons
-  - [ ] [#3](https://github.com/1337programming/monoscope/issues/3), Create a form that overlays the screen to fill out any options a macro button can have.
-  - [x] [#6] (https://github.com/1337programming/monoscope/issues/6), Edit project settings configuration
+![alt tag](https://raw.githubusercontent.com/1337programming/monoscope/master/logo.png)
 
-###Monoscope-Angular2
- - [ ] [#9] (https://github.com/1337programming/monoscope/issues/9), Build Angular2 skeleton app
- - [ ] [#10] (https://github.com/1337programming/monoscope/issues/10), Define Sub-generators
-
-###gulp-monoscope
- - [ ] [#11] (https://github.com/1337programming/monoscope/issues/11), Create plugin wrapper
-
-###grunt-monoscope
- - [ ] [#12] (https://github.com/1337programming/monoscope/issues/12), Create plugin wrapper
- 
-###Monoscope UI
- - [x] [#5] (https://github.com/1337programming/monoscope/issues/5) Modal Component
- - [ ] [#20] (https://github.com/1337programming/monoscope/issues/20) Editing Source Code
  
 ## Install & Run
- * Fork repo
- * Clone
- * `npm install`
- * edit `monoscope.json` to have `appPort` match the port of your desired app.
- * Run your desired app then run monoscope by typing `node monoscope.js`
+ * Run `npm install`
+ * Require the monoscope item in your automation development task.
+ * Write `monoscope.run(configuration, options)` within your automation development task.
  
 # License
   [MIT](/LICENSE)
