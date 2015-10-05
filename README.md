@@ -1,12 +1,13 @@
 [![Code Climate](https://codeclimate.com/github/1337programming/monoscope.svg)](https://codeclimate.com/github/1337programming/monoscope)
 [![GitHub version](https://badge.fury.io/gh/1337programming%2Fmonoscope.svg)](http://badge.fury.io/gh/1337programming%2Fmonoscope)
-[![Dependency Status](https://david-dm.org/1337-programming/angular2.0-App.svg)](https://david-dm.org/1337programming/angular2.0-App)
-[![Issue Stats](http://issuestats.com/github/1337-programming/angular2.0-Appr/badge/pr?style=flat)](http://issuestats.com/github/1337-programming/angular2.0-App)
+[![Dependency Status](https://david-dm.org/1337-programming/monoscope.svg)](https://david-dm.org/1337programming/monoscope)
+[![Issue Stats](http://issuestats.com/github/1337programming/monoscope/badge/pr)](http://issuestats.com/github/1337programming/monoscope)
+[![Issue Stats](http://issuestats.com/github/1337programming/monoscope/badge/issue)](http://issuestats.com/github/1337programming/monoscope)
 #Monoscope
 
 Create shortcuts in Node.js for while developing your modern web application locally.
 
-![alt tag](https://raw.githubusercontent.com/1337programming/monoscope/master/logo.png)
+![alt tag](https://raw.githubusercontent.com/1337programming/monoscope/master/logo-banner.png)
 
  
 ## Install & Run
