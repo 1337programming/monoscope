@@ -23,7 +23,8 @@ monoscope.run = function (shortcuts, config) {
     title: config.title || 'Monoscope',
     url: config.url || 'http://localhost:9000/',
     port: config.monoscopePort || 8045,
-    shortcuts: shortcutString
+    shortcuts: shortcutString,
+    color: config.color || '#444'
   };
 
   compileTemplate(options);

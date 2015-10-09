@@ -1,6 +1,7 @@
 var monoscope = require('../monoscope');
 monoscope.run(getShortcuts(), {
-    title: 'Components Example'
+    title: 'Components Example',
+    color: 'blue'
 });
 
 function getShortcuts() {
