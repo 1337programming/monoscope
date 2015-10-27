@@ -4,7 +4,8 @@ html
     link(rel='stylesheet', href='style.css')
     title!=title
   body
-    section#nav(style="background-color: #{color};")
-    iframe#app(src='#{url}', frameborder='0', height='100%', width='100%')
+    h1!=title
+    section(style="background-color: #{color};")
+      #app
     script!=shortcuts
     script(src='scripts.js')

@@ -1,0 +1,197 @@
+html,
+body {
+  height: 100%;
+  border: 0;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+
+#nav {
+  width: 100%;
+  /*padding: 10px 10px;*/
+  top: 0;
+  left: 0;
+  right: 0;
+}
+
+#app {
+  overflow: hidden;
+  height: calc(100% - 100px);
+  width: 100%;
+  background:#44D33D;
+}
+
+.monobutton {
+    float: left;
+    position: relative;
+    color: #333;
+    background-color: #fff;
+    border-color: #eee;
+    display: inline-block;
+    margin-bottom: 0;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 1.42857;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: middle;
+    touch-action: manipulation;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -ms-touch-action: manupulation;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    background-image: none;
+    border: 1px solid transparent;
+    border-radius: 4px;
+    -webkit-appearance: button;
+    overflow: visible;
+    height: 40px;
+    margin: 5px 5px 5px 5px;
+    align-items: flex-end;
+    text-rendering: auto;
+    letter-spacing: normal;
+    word-spacing: normal;
+    text-indent: 0px;
+    text-shadow: none;
+}
+
+.monobutton:hover {
+  background-color: #e6e6e6;
+  border-color: #adadad;
+  color: #333;
+}
+
+.modal {
+  background:#fff;
+  border:1px solid #eee;
+  position:fixed;
+  top:10px;
+  left:100px;
+  height: 500px;
+  width:600px;
+}
+
+.shortcut-container {
+  height: 100px;
+  min-height: 50px;
+  width: 100%;
+  display: inline-block;
+  overflow-x: auto;
+  white-space: nowrap;
+}
+
+
+/* Modal CSS */
+.link-wrapper {
+  display: inline-flex;
+}
+.modal-link {
+  padding: 13px 10px;
+  text-align: center;
+  position: relative;
+  /*width: 300px;*/
+  color: #fff;
+  text-decoration: none;
+  background-color: #FFBA00;
+  border-radius: 3px;
+  box-shadow: 0 5px 0px 0px #eea900;
+  display: block;
+}
+
+.modal-link:hover {
+  background-color: #ff9900;
+  /*box-shadow: 0 3px 0px 0px #eea900;*/
+  -webkit-transition: all 1s;
+  -moz-transition: all 1s;
+  transition: all 1s;
+}
+
+#modal {
+  visibility: visible;
+  opacity: 1;
+  background-color: rgba(255, 255, 255, 0.7);
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: 0;
+  z-index: 99999999999;
+  -webkit-transition: all 1s;
+  -moz-transition: all 1s;
+  transition: all 1s;
+}
+
+@media (min-width: 768px) {
+  .modal-container {
+    width: 600px;
+  }
+}
+
+.modal-container {
+  position: relative;
+  margin: 7% auto;
+  padding: 30px 50px;
+  background-color: #333;
+  color: #fff;
+  border-radius: 3px;
+}
+
+.modal-close {
+  position: absolute;
+  top: 3px;
+  right: 3px;
+  background-color: #fff;
+  padding: 7px 10px;
+  font-size: 20px;
+  text-decoration: none;
+  line-height: 1;
+  color: #333;
+  cursor: pointer;
+}
+
+.modal-form {
+  margin: 10px auto;
+}
+
+.modal-form h2 {
+  margin-bottom: 5px;
+  font-size: 37px;
+}
+
+.modal-form .input-group {
+  margin: 10px auto;
+}
+
+.modal-form .input-group input {
+  padding: 17px;
+  text-align: center;
+  margin-bottom: 10px;
+  border-radius: 3px;
+  font-size: 16px;
+  display: block;
+  width: 100%;
+}
+
+.modal-form .input-group input:focus {
+  outline-color: #FB8833;
+}
+
+.modal-form .input-group input[type="email"] {
+  border: 0px;
+  position: relative;
+}
+
+.modal-form .input-group input[type="submit"] {
+  background-color: #FB8833;
+  color: #fff;
+  border: 0;
+  cursor: pointer;
+}
+
+.modal-form .input-group input[type="submit"]:focus {
+  box-shadow: inset 0 3px 7px 3px #ea7722;
+}
