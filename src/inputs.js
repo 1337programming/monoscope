@@ -25,7 +25,7 @@ inputs.createInputDropdown = function (field, isMultiple) {
   if (isMultiple) {
     props.multiple = 'multiple';
   }
-  var s = m('select', props,
+  var s = m('select.form-control', props,
     field.options.map(function (option) {
       var opts = {
         value: option.value
@@ -40,7 +40,7 @@ inputs.createInputDropdown = function (field, isMultiple) {
 };
 
 inputs.createInputText = function (field) {
-  return m('input#' + field.id + '.row[type=text]', inputs.binds(field.value));
+  return m('input#' + field.id + '.form-control[type=text]', inputs.binds(field.value));
 };
 
 inputs.createInputCheckbox = function (field) {
@@ -48,5 +48,5 @@ inputs.createInputCheckbox = function (field) {
     field.value(false);
   }
 
-  return m('input#' + field.id + '.row[type=checkbox]', {onclick: m.withAttr("checked", field.value), checked: field.value()});
+  return m('input#' + field.id + '.form-control[type=checkbox]', {onclick: m.withAttr("checked", field.value), checked: field.value()});
 };
