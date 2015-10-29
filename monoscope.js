@@ -37,11 +37,6 @@ monoscope.run = function (shortcuts, config) {
   app.use(express.static(__dirname + '/public'));
 
   io.on('connection', function (socket) {
-
-    socket.on('connected', function (data) {
-      console.log('Monoscope connected!');
-    });
-
     socket.on('shortcut', function (info) {
       shortcuts.forEach(function (shortcut) {
         if (info.name === shortcut.name) {

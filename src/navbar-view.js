@@ -18,7 +18,6 @@ function openShortcut(shortcut, that) {
       vm.submit(shortcut)(e);
     }
     else {
-      console.log('called!!!', shortcut);
       bindOpen();
     }
   };
@@ -31,7 +30,11 @@ module.exports = function(vm) {
         config: config
       }, vm.shortcuts().map(function(shortcut) {
         return m('.masonry-brick', [
-          m('.masonry-inner', [
+          m('.masonry-inner', {
+            style: {
+              padding: '10px'
+            }
+          },[
             m('h2', shortcut.name),
             m('hr'),
             shortcut.form.map(function(field) {

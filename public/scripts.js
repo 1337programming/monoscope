@@ -22009,7 +22009,11 @@
 	        config: config
 	      }, vm.shortcuts().map(function(shortcut) {
 	        return m('.masonry-brick', [
-	          m('.masonry-inner', [
+	          m('.masonry-inner', {
+	            style: {
+	              padding: '10px'
+	            }
+	          },[
 	            m('h2', shortcut.name),
 	            m('hr'),
 	            shortcut.form.map(function(field) {
