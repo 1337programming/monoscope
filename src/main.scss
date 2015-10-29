@@ -1,25 +1,79 @@
+$btn-primary-color: black;
+$brand-primary: #8CD5ED;
 @import "../node_modules/bootstrap/scss/bootstrap.scss";
 h1 {
+    text-align: center;
+    background-color: #EEE;
+    padding-bottom: 10px;
+}
+
+h2 {
+    font-size: 1.2em;
     text-align: center;
 }
 
 section {
-    height: 100vh;
+    height: 100%;
 }
 
 .card {
-	color: black;
-	border: 0;
-	margin: 0;
-	padding: 0;
+    color: black;
+    border: 0;
+    margin: 0;
+    padding: 0;
 }
 
 .card-contents {
-	margin: 0.5rem;
-	background-color: darken(white, 12%);
-	border: 5px solid darken(white, 12%);
+    margin: 0.5rem;
+    background-color: darken(white, 12%);
+    border: 5px solid darken(white, 12%);
 }
 
 .full-width {
-	width: 100%;
+    width: 100%;
+}
+
+
+/* clearfix */
+
+.grid:after {
+    content: '';
+    display: block;
+    clear: both;
+}
+
+
+/* ---- grid-item ---- */
+
+.masonry-brick {
+    width: 250px;
+    float: left;
+    background: #EEE;
+    border: 2px solid #333;
+    border-color: hsla(0, 0%, 0%, 0.5);
+    border-radius: 5px;
+}
+
+.grid-item--width2 {
+    width: 320px;
+}
+
+.grid-item--width3 {
+    width: 480px;
+}
+
+.grid-item--width4 {
+    width: 640px;
+}
+
+.grid-item--height2 {
+    height: 200px;
+}
+
+.grid-item--height3 {
+    height: 260px;
+}
+
+.grid-item--height4 {
+    height: 360px;
 }
