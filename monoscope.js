@@ -39,9 +39,29 @@ monoscope.run = function (shortcuts, config) {
     socket.on('shortcut', function (info) {
       shortcuts.forEach(function (shortcut) {
         if (info.name === shortcut.name) {
-          return shortcut.action(info);
+          
+          return shortcut.action(buildData(info));
         }
       });
     });
   });
 };
+
+/**
+ * Convert the data returned from the UI to a more easily usable structure.
+ */
+function buildData(info) {
+  var data = {};
+  data.metadata = info;
+  if (info.form) {
+    info.form.forEach(function(field) {
+      if (field.prop) {
+        data[field.prop] = field.value;
+      }
+      else {
+        data[field.label] = field.value;
+      }
+    });
+  }
+  return data;
+}

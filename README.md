@@ -26,6 +26,7 @@ Text fields should be in the form:
 ```javascript
 var text = {
   label: 'Text Example', //Text to show
+  prop: 'testExampleVariableName'
   type: 'text',
   default: 'My Text'//or omitted
 };
@@ -37,6 +38,7 @@ Checkboxes should be in the form:
 ```javascript
 var checkbox = {
   label: 'Checkbox', //Text to show
+  prop: 'checkboxVariableName',
   type: 'checkbox',
   default: true //or false
 };
@@ -47,6 +49,7 @@ Selects should be in the form:
 ```javascript
 var select = {
   label: 'Select', //Text to show
+  prop: 'selectVariableName',
   type: 'select',
   options: [
     label: 'Example Option',
@@ -62,6 +65,7 @@ Multiselects should be in the form:
 ```javascript
 var multiselect = {
  label: 'Multiselect', //Text to show
+ prop: 'multiselectVariableName',
  type: 'multiselect',
  options: [{
    label: 'Example Option',
@@ -74,7 +78,6 @@ var multiselect = {
 Options include:
  - title: The title of the Monoscope application. Default value of 'Monoscope'
  - appPort: The port of the local application being shown. Default value is 9000.
- - monoscopePort: The port monoscope is ran on. Default value is 8045.
  
 ## Cheers
 ![PandaBear](https://s3.amazonaws.com/uploads.hipchat.com/69515/932142/DL97c184IFoG2su/PandaBear.png)

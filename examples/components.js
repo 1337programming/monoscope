@@ -11,11 +11,13 @@ function getShortcuts() {
         form: [
         {
             label: 'Module Name',
+            prop: 'moduleName',
             type: 'text',
             default: 'newModule'
         },
         {
             label: 'Include a Directive?',
+            prop: 'includeDirective',
             type: 'checkbox'
         }],
         action: function(data) {
@@ -27,11 +29,13 @@ function getShortcuts() {
         form: [
         {
             label: 'Service Name',
+            prop: 'serviceName',
             type: 'text',
             default: 'myService'
         },
         {
             label: 'Select Test',
+            prop: 'selectTest',
             type: 'select',
             options: [
             {
@@ -46,6 +50,7 @@ function getShortcuts() {
         },
         {
             label: 'Multiselect Test',
+            prop: 'multiselectTest',
             type: 'multiselect',
             options: [
             {
@@ -61,6 +66,7 @@ function getShortcuts() {
         },
         {
             label: 'Checkbox Test',
+            prop: 'checkboxTest',
             type: 'checkbox',
             default: true
         }],
