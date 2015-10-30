@@ -21,8 +21,7 @@ monoscope.run = function (shortcuts, config) {
   var shortcutString = 'window.shortcuts = ' + JSON.stringify(shortcuts) + ';';
   var options = {
     title: config.title || 'Monoscope',
-    url: config.url || 'http://localhost:9000/',
-    port: config.monoscopePort || 8045,
+    port: config.port || 8045,
     shortcuts: shortcutString,
     color: config.color || '#444'
   };
