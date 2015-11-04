@@ -14696,14 +14696,12 @@
 	    vm.submit = function(shortcut) {
 	        return function(e) {
 	            socket.emit('shortcut', shortcut);
-	            shortcut.modal.visible(false);
 	            e.preventDefault();
 	        };
 	    };
 
 	    vm.shortcuts = m.prop(window.shortcuts);
 	    vm.shortcuts().map(function(shortcut) {
-	        shortcut.modal = {};
 	        shortcut.form = shortcut.form || [];
 	        shortcut.form.map(function(field) {
 	            field.value = m.prop(field.default || '');
@@ -21942,14 +21940,27 @@
 	inputs.createInputDropdown = function (field, isMultiple) {
 	  field.options = field.options || [];
 	  var props = {};
-	  props.size = field.options.length;
 	  if (isMultiple) {
+	    if (!Array.isArray(field.value())) {
+	      field.value = m.prop([field.value()]);  
+	    }
 	    props.multiple = 'multiple';
 	  }
+	  props.size = field.options.length;
 	  var s = m('select.form-control', props,
 	    field.options.map(function (option) {
 	      var opts = {
-	        value: option.value
+	        value: option.value,
+	        onclick: function(e) {
+	          var selectedOptions = [];
+	          for (var i = 0; i < field.options.length; i++) {
+	            var element = e.srcElement.parentElement[i];
+	            if (element.selected) {
+	              selectedOptions.push(element.value);
+	            }
+	          }
+	          field.values = selectedOptions;
+	        }
 	      };
 	      if (option.selected) {
 	        opts.selected = 'selected';
@@ -21996,7 +22007,6 @@
 	      vm.submit(shortcut)(e);
 	    }
 	    else {
-	      console.log('called!!!', shortcut);
 	      bindOpen();
 	    }
 	  };

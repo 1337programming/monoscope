@@ -56,10 +56,10 @@ function buildData(info) {
   if (info.form) {
     info.form.forEach(function(field) {
       if (field.prop) {
-        data[field.prop] = field.value;
+        data[field.prop] = field.values || field.value;
       }
       else {
-        data[field.label] = field.value;
+        data[field.label] = field.values || field.value;
       }
     });
   }

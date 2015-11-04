@@ -21,14 +21,27 @@ inputs.createInput = function (field) {
 inputs.createInputDropdown = function (field, isMultiple) {
   field.options = field.options || [];
   var props = {};
-  props.size = field.options.length;
   if (isMultiple) {
+    if (!Array.isArray(field.value())) {
+      field.value = m.prop([field.value()]);  
+    }
     props.multiple = 'multiple';
   }
+  props.size = field.options.length;
   var s = m('select.form-control', props,
     field.options.map(function (option) {
       var opts = {
-        value: option.value
+        value: option.value,
+        onclick: function(e) {
+          var selectedOptions = [];
+          for (var i = 0; i < field.options.length; i++) {
+            var element = e.srcElement.parentElement[i];
+            if (element.selected) {
+              selectedOptions.push(element.value);
+            }
+          }
+          field.values = selectedOptions;
+        }
       };
       if (option.selected) {
         opts.selected = 'selected';

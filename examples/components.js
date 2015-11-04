@@ -62,6 +62,15 @@ function getShortcuts() {
                 label: 'Label 2',
                 value: 'label2',
                 selected: 'selected'
+            },
+            {
+                label: 'Label 3',
+                value: 'label3'
+            },
+            {
+                label: 'Label 4',
+                value: 'label4',
+                selected: 'selected'
             }]
         },
         {
