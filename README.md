@@ -1,5 +1,5 @@
 [![Code Climate](https://codeclimate.com/github/1337programming/monoscope.svg)](https://codeclimate.com/github/1337programming/monoscope)
-[![GitHub version](https://badge.fury.io/gh/1337programming%2Fmonoscope.svg)](http://badge.fury.io/gh/1337programming%2Fmonoscope)
+[![GitHub version](https://badge.fury.io/gh/1337programming%2Fmonoscope.svg)](http://badge.fury.io/gh/1337programming/monoscope)
 [![Dependency Status](https://david-dm.org/1337-programming/monoscope.svg)](https://david-dm.org/1337programming/monoscope)
 [![Issue Stats](http://issuestats.com/github/1337programming/monoscope/badge/pr)](http://issuestats.com/github/1337programming/monoscope)
 [![Issue Stats](http://issuestats.com/github/1337programming/monoscope/badge/issue)](http://issuestats.com/github/1337programming/monoscope)
