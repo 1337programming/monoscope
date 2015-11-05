@@ -20,6 +20,26 @@ inputs.createInput = function (field) {
 
 inputs.createInputDropdown = function (field, isMultiple) {
   field.options = field.options || [];
+  
+  //Setup inital Values
+  if (!field.initialized) {
+    field.initialized = true;  
+
+    var initialSelectedOptions = [];
+    field.options.forEach(function(option) {
+      if (option.selected) {
+        initialSelectedOptions.push(option.value);
+      }
+    });
+    if (isMultiple) {
+      field.values = initialSelectedOptions;
+    }
+    else if (initialSelectedOptions.length > 0) {
+      field.value = initialSelectedOptions[0]
+    }
+
+  }
+    
   var props = {};
   if (isMultiple) {
     if (!Array.isArray(field.value())) {
@@ -40,7 +60,12 @@ inputs.createInputDropdown = function (field, isMultiple) {
               selectedOptions.push(element.value);
             }
           }
-          field.values = selectedOptions;
+          if (isMultiple) {
+            field.values = selectedOptions;
+          }
+          else if (selectedOptions.length > 0) {
+            field.value = selectedOptions[0];
+          }
         }
       };
       if (option.selected) {
